@@ -9,6 +9,7 @@ from homeassistant.const import (
     DEVICE_CLASS_ILLUMINANCE,
     DEVICE_CLASS_TEMPERATURE,
     DEVICE_CLASS_POWER,
+    DEVICE_CLASS_ENERGY,
     TEMP_CELSIUS,
     POWER_WATT,
     ENERGY_WATT_HOUR
@@ -332,10 +333,10 @@ SENSOR_TYPES_CFG = {
         ['Illuminance', 'lux', None, DEVICE_CLASS_ILLUMINANCE, None],
     SENSOR_TYPE_TOTAL_CONSUMPTION:
         ['Total consumption', ENERGY_WATT_HOUR,
-         'mdi:flash-circle', DEVICE_CLASS_POWER, None],
+         'mdi:flash-circle', DEVICE_CLASS_ENERGY, None],
     SENSOR_TYPE_TOTAL_RETURNED:
         ['Total returned', ENERGY_WATT_HOUR,
-         'mdi:flash-circle', DEVICE_CLASS_POWER, None],
+         'mdi:flash-circle', DEVICE_CLASS_ENERGY, None],
     SENSOR_TYPE_VOLTAGE:
         ['Voltage', 'V', 'mdi:alpha-v-circle-outline', None, None],
     SENSOR_TYPE_POWER_FACTOR:
