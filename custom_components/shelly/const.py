@@ -10,6 +10,10 @@ from homeassistant.const import (
     DEVICE_CLASS_TEMPERATURE,
     DEVICE_CLASS_POWER,
     DEVICE_CLASS_ENERGY,
+    DEVICE_CLASS_SIGNAL_STRENGTH,
+    DEVICE_CLASS_POWER_FACTOR,
+    DEVICE_CLASS_VOLTAGE,
+    DEVICE_CLASS_CURRENT,
     TEMP_CELSIUS,
     POWER_WATT,
     ENERGY_WATT_HOUR
@@ -305,9 +309,9 @@ SENSOR_TYPES_CFG = {
     SENSOR_TYPE_HUMIDITY:
         ['Humidity', '%', None, DEVICE_CLASS_HUMIDITY, None],
     SENSOR_TYPE_POWER:
-        ['Consumption', POWER_WATT, 'mdi:flash-outline', None, None],
+        ['Consumption', POWER_WATT, 'mdi:flash-outline', DEVICE_CLASS_POWER, None],
     SENSOR_TYPE_RSSI:
-        ['RSSI', 'dB', 'mdi:wifi', None, None],
+        ['RSSI', 'dB', 'mdi:wifi', DEVICE_CLASS_SIGNAL_STRENGTH, None],
     SENSOR_TYPE_RSSI_LEVEL:
         ['RSSI Level', None, 'mdi:wifi', None, None],
     SENSOR_TYPE_UPTIME:
@@ -317,7 +321,7 @@ SENSOR_TYPES_CFG = {
     SENSOR_TYPE_OVER_POWER:
         ['Over power', '', 'mdi:flash-alert', None, 'bool'],
     SENSOR_TYPE_DEVICE_TEMP:
-        ['Device temperature', TEMP_CELSIUS, "mdi:oil-temperature", None, None],
+        ['Device temperature', TEMP_CELSIUS, "mdi:oil-temperature", DEVICE_CLASS_TEMPERATURE, None],
     SENSOR_TYPE_OVER_TEMP:
         ['Over temperature', '', 'mdi:alert', None, 'bool'],
     SENSOR_TYPE_CLOUD_STATUS:
@@ -338,11 +342,11 @@ SENSOR_TYPES_CFG = {
         ['Total returned', ENERGY_WATT_HOUR,
          'mdi:flash-circle', DEVICE_CLASS_ENERGY, None],
     SENSOR_TYPE_VOLTAGE:
-        ['Voltage', 'V', 'mdi:alpha-v-circle-outline', None, None],
+        ['Voltage', 'V', 'mdi:alpha-v-circle-outline', DEVICE_CLASS_VOLTAGE, None],
     SENSOR_TYPE_POWER_FACTOR:
-        ['Power factor', None, 'mdi:flash', None, None],
+        ['Power factor', None, 'mdi:flash', DEVICE_CLASS_POWER_FACTOR, None],
     SENSOR_TYPE_CURRENT:
-        ['Current', 'A', 'mdi:alpha-i-circle-outline', None, None],
+        ['Current', 'A', 'mdi:alpha-i-circle-outline', DEVICE_CLASS_CURRENT, None],
     SENSOR_TYPE_CLICK_TYPE:
         ['Click type', '', 'mdi:light-switch', None, None],
     SENSOR_TYPE_TILT:
@@ -356,5 +360,5 @@ SENSOR_TYPES_CFG = {
     SENSOR_TYPE_EXT_SWITCH:
         ['External switch', '', 'mdi:electric-switch', None, 'bool'],
     SENSOR_TYPE_MOTION:
-        ['Motion', '', 'mdi:motion-sensor', DEVICE_CLASS_MOTION, 'bool'],
+        ['Motion', '', 'mdi:motion-sensor', None, 'bool'],
 }
